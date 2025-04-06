@@ -1,5 +1,5 @@
 //This is the entry point
-import { content, homepage, menu } from "./scripts.js";
+import { content, homepage, menu, about} from "./scripts.js";
 //test
 //console.log("Hello world!");
 homepage();
@@ -9,7 +9,7 @@ const navButtons = document.querySelectorAll("nav>button");
 navButtons.forEach((button) => 
     button.addEventListener("click",btnEventHandler)
 )
-
+//Function for handling button click event
 function btnEventHandler(e) {
     const btnName = e.target.name;
        //wipe out current content
@@ -21,6 +21,6 @@ function btnEventHandler(e) {
             menu();
        }
        else if (btnName === "About") {
-            //about();
+            about();
        }
 }

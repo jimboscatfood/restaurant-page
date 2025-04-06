@@ -1,8 +1,9 @@
 //Export modules
 const homepage = loadHomepage;
 const menu = loadMenu;
+const about = loadAbout;
 
-export {content, homepage, menu};
+export {content, homepage, menu, about};
 
 const content = document.querySelector("div#content");
 
@@ -23,7 +24,7 @@ function loadHomepage() {
     const main = document.createElement("div");
     container.appendChild(main);
     const welcomeMsg = document.createElement("h1");
-    welcomeMsg.textContent = "Welcome to YO MAMA's Favourite Restaurant";
+    welcomeMsg.textContent = "Welcome to YOMAMA's Favourite Restaurant";
     main.appendChild(welcomeMsg);
     const introMsg = document.createElement("h2");
     introMsg.textContent = "Making YO MAMA's favourite dishes since 1969";
@@ -79,3 +80,19 @@ function loadMenu() {
     }
 }
 
+function loadAbout() {
+    const container = document.createElement("div");
+    content.appendChild(container);
+
+    const heading = document.createElement("h1");
+    heading.textContent = "About Us";
+    container.appendChild(heading);
+    const descriptionBox = document.createElement("div");
+    container.appendChild(descriptionBox);
+    const image = document.createElement("img");
+    descriptionBox.appendChild(image);
+    const description = document.createElement("p");
+    const descriptionText = document.createTextNode("YOMAMA is dedicated to making yo mama's favourite food at the best quality.");
+    description.appendChild(descriptionText);
+    descriptionBox.appendChild(description);
+}
