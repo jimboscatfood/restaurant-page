@@ -1,5 +1,6 @@
 //This is the entry point
 import { content, homepage, menu, about} from "./scripts.js";
+import "./styles.css";
 //test
 //console.log("Hello world!");
 homepage();

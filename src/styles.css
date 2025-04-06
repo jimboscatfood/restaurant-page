@@ -1,0 +1,227 @@
+/* CSS reset */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    10. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'logoFont';
+    src: url('./chunkfive-regular-webfont.woff2') format('woff2'),
+      url('./chunkfive-regular-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:30px;
+    border-bottom: rgb(181, 174, 174) 2px solid;
+}
+
+nav h1 {
+    font-family: 'logoFont';
+    font-size: 3rem;
+    color:red;
+    padding:0 2rem 0 2rem;
+}
+
+nav button {
+    border: none;
+    background-color: white;
+    font-size:1.5rem;
+    font-weight: 600;
+}
+
+nav button:hover {
+    cursor:pointer;
+}
+
+div#content {
+    height:100vh;
+}
+
+.homeDiv {
+    display: grid;
+    grid-template: 1fr/ 4fr 1fr;
+    height:100%;
+}
+
+.homeDiv > div {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeMainDiv, .menuDiv, .aboutDiv {
+    background-image: url(https://media.istockphoto.com/id/1182393436/vector/fast-food-seamless-pattern-with-vector-line-icons-of-hamburger-pizza-hot-dog-beverage.jpg?s=612x612&w=0&k=20&c=jlj-n_CNsrd13tkHwC7MVo0cGUyyc8YP6wJQdCvMUGw=);
+    background-repeat:repeat;
+    min-height:fit-content;
+}
+
+.homeMainDiv h1{
+    font-size: 3rem;
+    margin-top:300px;
+    color:red;
+    font-weight:900;
+    background-color: white;
+    padding:10px;
+    border-radius:20px;
+    text-align: center;
+}
+
+.homeMainDiv h2{
+    font-size: 1.5rem;
+    margin-top:20px;
+    color:black;
+    font-weight:700;
+    background-color: white;
+    padding:5px;
+    border-radius:20px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.homeSideDiv p {
+    margin-top:300px;
+    font-size:1.3rem;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom:20px;
+}
+
+.homeSideDiv svg {
+    fill:red;
+}
+
+.menuDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menuDiv ul {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style-type:none;
+    background-color: white;
+    padding:50px;
+    border-radius: 10%;
+    gap: 70px;
+}
+
+.menuDiv img {
+    display: block;
+    width: 200px;
+    max-height:200px;
+    object-fit: cover;
+    background: none;
+}
+
+.menuDiv li {
+    font-weight: 700;
+    font-size:1.5rem;
+}
+
+.menuDiv li p {
+    font-weight:normal;
+    font-size:1rem;
+}
+
+.aboutDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+}
+
+.aboutDiv h1 {
+    font-size: 4rem;
+    margin-top:100px;
+    color:black;
+    font-weight:700;
+    background-color: white;
+    padding:5px;
+    border-radius:20px;
+    text-align: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    margin:100px;
+    align-items: center;
+    gap:5px;
+}
+
+.aboutDiv img {
+    content: url('https://normallifemom.com/wp-content/uploads/2019/03/AdobeStock_129787725-scaled.jpeg');
+    max-width: 500px;
+    display: block;
+}
+
+.aboutDiv p {
+    font-size: 1.5rem;
+    max-width: 400px;
+    color:black;
+    background-color: white;
+    border-radius:20px;
+    padding:10px;
+}
