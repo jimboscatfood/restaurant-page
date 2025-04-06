@@ -34,3 +34,40 @@ function loadHomepage() {
     sideMsg.textContent = "Follow us on social media";
 }
 
+function loadMenu() {
+    const container = document.createElement("div");
+    content.appendChild(container);
+
+    const menu = [
+        {
+            name: "Double Cheese Burger",
+            ingredients: "Buns, cheese, beef patty, no lettuce",
+            price: "$69.00",
+        },
+        {
+            name: "Meatlover Pizza",
+            ingredients: "Sourdough pizza, cheese, chicken, pepperoni",
+            price: "$69.00",
+        },
+        {
+            name: "Sweet Potatoe Fries",
+            ingredients: "Sweet potatoes",
+            price: "$69.00",
+        },        
+    ]
+    const menuList = document.createElement("ul");
+    container.appendChild(menuList);
+    for (let i = 0; i < menu.length; i++) {
+        const menuItem = document.createElement("li");
+        menuItem.textContent = menu[i].name;
+        const itemImg = document.createElement("img");
+        menuItem.appendChild(itemImg);
+        const itemIngredients = document.createElement("p");
+        itemIngredients.textContent = `Ingredients: ${menu[i].ingredients}`;
+        menuItem.appendChild(itemIngredients);
+        const itemPrice = document.createElement("p");
+        itemPrice.textContent = `Price: ${menu[i].price}`;
+        menuItem.appendChild(itemPrice);
+    }
+}
+
