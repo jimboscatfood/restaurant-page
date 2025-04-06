@@ -1,7 +1,8 @@
 //Export modules
-const Homepage = loadHomepage;
+const homepage = loadHomepage;
+const menu = loadMenu;
 
-export {Homepage};
+export {content, homepage, menu};
 
 const content = document.querySelector("div#content");
 
@@ -9,9 +10,10 @@ const content = document.querySelector("div#content");
 function loadHomepage() {
     //Initialise navbar button text content
     const navButtons = ["Home", "Menu", "About"];
-    const navButtonsDom = document.querySelectorAll("button");
+    const navButtonsDom = document.querySelectorAll("nav>button");
     for (let i = 0; i < navButtons.length; i++) {
         navButtonsDom[i].textContent = navButtons[i];
+        navButtonsDom[i].setAttribute("name", navButtons[i]);
     }
 
     //Create new DOM elements to be appended to div#content
@@ -53,13 +55,19 @@ function loadMenu() {
             name: "Sweet Potatoe Fries",
             ingredients: "Sweet potatoes",
             price: "$69.00",
-        },        
+        },
+        {
+            name: "Quesadilla",
+            ingredients: "Tortillas, cheese, meat, salsa",
+            price: "$69.00",
+        }        
     ]
     const menuList = document.createElement("ul");
     container.appendChild(menuList);
     for (let i = 0; i < menu.length; i++) {
         const menuItem = document.createElement("li");
         menuItem.textContent = menu[i].name;
+        menuList.appendChild(menuItem);
         const itemImg = document.createElement("img");
         menuItem.appendChild(itemImg);
         const itemIngredients = document.createElement("p");
